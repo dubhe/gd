@@ -1,0 +1,9 @@
+<%- include header %>
+<% articles.forEach(function (article, index) { %>
+  <p><h2><a href="/article?article=<%= article.title %>"><%= article.title %></a></h2></p>
+  <p class="info">
+    作者：<%= article.name %> | 
+    日期：<%= article.time.minute %>
+  </p>
+<% }) %>
+<%- include footer %>

@@ -1,0 +1,16 @@
+<%- include header %>
+<% posts.forEach(function (post, index) { %>
+  <p><h2><a href="/article?article=<%= post.title %>"><%= post.title %></a></h2></p>
+  <p class="info">
+    作者：<a href="/articlelist?author=<%= post.name %>"><%= post.name %></a> | 
+    日期：<%= post.time.minute %>
+  </p>
+<% }) %>
+<%=JSON.stringify(posts)%>
+<%=count%>
+<div id="example"></div>
+<script type="text/javascript" src="/js/react.min.js"></script>
+<script type="text/javascript" src="/js/react-dom.min.js"></script>
+<script type="text/javascript" src="/js/public.js"></script>
+
+<%- include footer %>

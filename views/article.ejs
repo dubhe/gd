@@ -1,0 +1,8 @@
+<%- include header %>
+<h2><%= article.title %></h2>
+  <p class="info">
+    作者：<%= article.name %> | 
+    日期：<%= article.time.minute %>
+  </p>
+  <p><%- article.post %></p>
+<%- include footer %>

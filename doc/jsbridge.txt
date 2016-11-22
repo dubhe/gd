@@ -1,0 +1,39 @@
+
+H5 & Native 伪协议约定：
+
+1.协议名：tqb
+2.H5 调用格式：    tqb://Method/Index/?{params}    
+3.Native 回调格式：tqb_cbIndex({return})
+
+Method List:
+1.share 分享
+  params {
+    title 标题  
+    desc  描述
+    url   分享链接，为空时，使用当前链接
+    img   分享图片，300*300
+    type  1微信好友 2微信朋友圈 3QQ好友 4QQ空间 5新浪微博 6复制链接 0弹出选择面板
+  }
+  return {
+    code 0失败，1成功
+  }
+
+2.setMenu 设置右上角按钮
+  params {
+      show 0隐藏，1显示
+      text 按钮文案，为空则显示按钮图片
+      img  按钮图片
+  }
+  return {
+
+  }
+
+3.showPanel 显示底部面板
+  params [{ 数组，每一行为一个对象
+      text       每一行的标题
+      btns {     每一行的按钮，一屏显示4个，可左右滚动
+          text   按钮文案
+          img    按钮icon
+          callback    按钮回调
+      }
+  }]

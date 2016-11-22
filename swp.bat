@@ -1,0 +1,1 @@
+webpack --watch -p -d
